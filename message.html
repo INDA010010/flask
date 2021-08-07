@@ -1,0 +1,35 @@
+<!doctype html>
+<head>
+	<title>Message</title>
+</head>
+<body onLoad="timeRefresh(5000);">
+    <style type="text/css">
+      body {
+		margin: 0;
+		font-family: Courier New;
+	  }
+	  center {
+	    position: fixed;
+	    top: 50%;
+  	    left: 50%;
+  		transform: translate(-50%, -50%);
+      }
+      textarea {
+        overflow: auto;
+        width: 300px;
+        height: 450px;
+      }
+      .delete {
+        width: 100px;
+      }
+	</style>
+	<center>
+	<textarea id="messages">{{ messages }}</textarea>
+    <form action="" method="post">
+        <input type="text" placeholder="Reciver" name="reciver" value="{{ request.form.reciver }}">
+        <input type="text" placeholder="Message" name="message" value="{{ request.form.message }}">
+	    <input type="submit" value="Send">
+	    <input id="delete" type="text" placeholder="Delete Messages Type Y" name="delete" value="{{ request.form.delete }}">
+	</form>
+	</center>
+</body>

@@ -1,0 +1,78 @@
+<!doctype html>
+<head>
+	<title>Sign In</title>
+</head>
+<body>
+	<style type="text/css">
+      body {
+		margin: 0;
+		font-family: Courier New;
+		background-image: url('http://www.hdwallpaperslife.com/wp-content/uploads/2017/12/foggy_morning_mountains-wide.jpg');
+	  }
+	  h1 {
+	    position: fixed;
+	    top: 10%;
+  	    left: 50%;
+  		transform: translate(-50%, -50%);
+      }
+      #username {
+        position: fixed;
+	    top: 40%;
+  	    left: 50%;
+  		transform: translate(-50%, -50%);
+  	 }
+  	 #password {
+        position: fixed;
+	    top: 50%;
+  	    left: 50%;
+  		transform: translate(-50%, -50%);
+  	 }
+  	 #button {
+        position: fixed;
+	    top: 60%;
+  	    left: 50%;
+  		transform: translate(-50%, -50%);
+  	 }
+  	 a {
+        position: fixed;
+	    top: 75%;
+  	    left: 50%;
+  		transform: translate(-50%, -50%);
+  	 }
+  	 .error {
+  	    position: fixed;
+	    top: 85%;
+  	    left: 50%;
+  		transform: translate(-50%, -50%);
+  	 }
+  	 div {
+	    position: fixed;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+  		color: black;
+		border-radius: 25px;
+		background: #efefefef;
+		padding: 20px;
+		width: 350px;
+		height: 450px;
+		box-shadow: 10px 10px 25px #999;		
+	  }
+	</style>
+	<center>
+	<div>
+	    <h1>Please Sign In</h1>
+		<form action="" method="post">
+			<input id="username" type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+         	<input id="password" type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        	<input id="button" type="submit" value="Sign In">
+      	</form>
+      	<a href="/signup">Don't Have A Account? Click Here To Make One!</a>
+      	{% if error %}
+        	<p class="error"><strong>Error:</strong> {{ error }}
+      	{% endif %}
+    </div>
+    </center>
+</body>

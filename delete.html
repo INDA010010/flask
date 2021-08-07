@@ -1,0 +1,72 @@
+<!doctype html>
+<head>
+	<title>Delete Account</title>
+</head>
+<body>
+	<style type="text/css">
+      body {
+		margin: 0;
+		font-family: Courier New;
+		background-image: url('https://wallup.net/wp-content/uploads/2018/03/23/569054-Iceland-dark-sky-nature-landscape.jpg');
+	  }
+	  h1 {
+	    position: fixed;
+	    top: 10%;
+  	    left: 50%;
+  		transform: translate(-50%, -50%);
+      }
+      #username {
+        position: fixed;
+	    top: 40%;
+  	    left: 50%;
+  		transform: translate(-50%, -50%);
+  	 }
+  	 #password {
+        position: fixed;
+	    top: 50%;
+  	    left: 50%;
+  		transform: translate(-50%, -50%);
+  	 }
+  	 #button {
+        position: fixed;
+	    top: 60%;
+  	    left: 50%;
+  		transform: translate(-50%, -50%);
+  	 }
+  	 div {
+	    position: fixed;
+	    opacity: 100%;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+  		color: black;
+		border-radius: 25px;
+		background: #efefefef;
+		padding: 20px;
+		width: 350px;
+		height: 350px;
+		box-shadow: 10px 10px 25px #999;		
+	  }
+	  .error {
+  	    position: fixed;
+	    top: 85%;
+  	    left: 50%;
+  		transform: translate(-50%, -50%);
+  	 }
+	</style>
+    <center>
+    <div>
+	    <h1>Delete Account</h1>
+		<form action="" method="post">
+			<input id="username" type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+         	<input id="password" type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        	<input id="button" type="submit" value="Delete">
+      	</form>
+      	{% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      	{% endif %}
+    </div>
+    </center>
+</body>

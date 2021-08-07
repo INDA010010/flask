@@ -1,0 +1,65 @@
+<!doctype html>
+<head>
+	<title>Flask Python</title>
+</head>
+<body>
+	<style type="text/css">
+      body {
+		margin: 0;
+		font-family: Courier New;
+		background-image: url('https://wallpapertag.com/wallpaper/full/7/a/5/118709-large-black-gradient-background-1920x1080-phone.jpg');
+		background-size: 100%, 100%;
+		background-repeat: no-repeat;
+		background-color: #000000;
+	  }
+	  .card {
+	    position: fixed;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+  		color: black;
+		border-radius: 25px;
+		background: #efefefef;
+		padding: 20px;
+		width: 250px;
+		height: 80px;
+		box-shadow: 10px 10px 25px #999;		
+	  }
+      .header {
+        position: sticky;
+	    color: white;
+		background-color: #555555;
+		text-align: center;
+      }
+      .nav {
+		overflow: hidden;
+	    background-color: #555555;
+	  }
+	  .nav a {
+	    float: left;
+	    display: block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px 20px;
+		text-decoration: none;
+	  }
+	  .nav a:hover {
+		background-color: grey;
+		color: white;
+	  }
+	</style>
+	<div class="nav">
+	    <h1 class="header">Flask Main Page</h1>
+	    <a href="/signin">Sign In</a>
+	    <a href="/signup">Sign Up</a>
+	    <a href="/home">Home</a>
+	    <a href="/delete">Delete Account</a>
+	</div>
+	<center>
+		<div class="card">
+			<h1>
+				<b>Welcome!</b>
+			</h1>
+		</div>
+	</center>
+</body>
